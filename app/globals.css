@@ -1,0 +1,295 @@
+@import "tailwindcss";
+@tailwind utilities;
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+:root {
+
+  /** Base colors */
+  --clr-dark-a0: #000000;
+  --clr-light-a0: #ffffff;
+
+  /** Theme primary colors */
+  --clr-primary-a0: #093144;
+  --clr-primary-a10: #1b394a;
+  --clr-primary-a20: #294151;
+  --clr-primary-a30: #354a57;
+  --clr-primary-a40: #42535e;
+  --clr-primary-a50: #4e5b65;
+
+  /** Theme surface colors */
+  --clr-surface-a0: #ffffff;
+  --clr-surface-a10: #f0f0f0;
+  --clr-surface-a20: #e1e1e1;
+  --clr-surface-a30: #d3d3d3;
+  --clr-surface-a40: #c5c5c5;
+  --clr-surface-a50: #b6b6b6;
+
+  /** Theme tonal surface colors */
+  --clr-surface-tonal-a0: #e5e8eb;
+  --clr-surface-tonal-a10: #d9dcdf;
+  --clr-surface-tonal-a20: #ced0d2;
+  --clr-surface-tonal-a30: #c2c4c6;
+  --clr-surface-tonal-a40: #b7b8ba;
+  --clr-surface-tonal-a50: #acadae;
+
+  --font-sans: 'Space Mono', monospace;
+  --font-mono: 'Space Mono', monospace;
+
+  --color-bg-primary: var(--clr-surface-a0);
+  --color-bg-secondary: var(--clr-surface-a10);
+
+  --color-primary: var(--clr-primary-a0);
+  --color-secondary: var(--clr-primary-a10);
+  --color-muted: var(--clr-primary-a50);
+
+  --color-text-primary: var(--clr-dark-a0);
+  --color-text-secondary: var(--clr-light-a0);
+  --color-text-muted: var(--clr-primary-a0);
+
+  --color-border-primary: var(--clr-surface-a30);
+  --color-border-secondary: var(--clr-primary-a20);
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  /** Base colors */
+  --clr-dark-a0: #000000;
+  --clr-light-a0: #ffffff;
+
+  /** Theme primary colors */
+  --clr-primary-a0: #5185c3;
+  --clr-primary-a10: #6792ca;
+  --clr-primary-a20: #7c9fd1;
+  --clr-primary-a30: #8facd7;
+  --clr-primary-a40: #a2b9de;
+  --clr-primary-a50: #b5c7e5;
+
+  /** Theme surface colors */
+  --clr-surface-a0: #121212;
+  --clr-surface-a10: #282828;
+  --clr-surface-a20: #3f3f3f;
+  --clr-surface-a30: #575757;
+  --clr-surface-a40: #717171;
+  --clr-surface-a50: #8b8b8b;
+
+  /** Theme tonal surface colors */
+  --clr-surface-tonal-a0: #1a1c21;
+  --clr-surface-tonal-a10: #2f3136;
+  --clr-surface-tonal-a20: #45474c;
+  --clr-surface-tonal-a30: #5d5f63;
+  --clr-surface-tonal-a40: #76777b;
+  --clr-surface-tonal-a50: #909194;
+
+    --color-bg-dark-primary: var(--clr-surface-a0);
+    --color-bg-dark-secondary: var(--clr-surface-a10);
+
+    --color-dark-primary: var(--clr-primary-a0);
+    --color-dark-secondary: var(--clr-surface-a10);
+    --color-dark-muted: var(--clr-surface-tonal-a30);
+
+    --color-dark-text-primary: var(--clr-light-a0);
+    --color-dark-text-secondary: var(--clr-dark-a0);
+    --color-dark-text-muted: var(--clr-primary-a0);
+
+    --color-dark-border-primary: var(--clr-surface-a30);
+    --color-dark-border-secondary: var(--clr-primary-a20);
+  }
+  
+}
+
+@layer utilities {
+
+  /* Body */
+  .body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+  } 
+  .dark .body {
+    background-color: var(--color-bg-dark-primary);
+    color: var(--color-dark-text-primary);
+  }
+
+  /* button */
+  .btn-primary {
+    background-color: transparent;
+    color: var(--color-text-primary);
+  }
+  .btn-primary:hover{
+    background-color: var(--clr-surface-a40);
+  }
+  .btn-primary:focus{
+    @apply ring-0;
+  }
+  .dark .btn-primary {
+    background-color: transparent;
+    color: var(--color-dark-text-primary);
+  }
+  .dark .btn-primary:hover{
+    background-color: var(--clr-surface-a40);
+  }
+
+  /* selected button */
+  .btn-selected {
+    background-color: transparent;
+    color: var(--color-text-muted);
+    font-weight: 600;
+  }
+  .btn-selected:hover {
+    background-color: var(--clr-primary-a50);
+    color: var(--color-text-primary);
+  }
+  .dark .btn-selected {
+    background-color: transparent;
+    color: var(--color-dark-muted);
+    font-weight: 600;
+  }
+  .dark .btn-selected:hover {
+    background-color: var(--clr-surface-a20);
+    color: var(--color-dark-text-primary);
+  }
+
+  /* muted button */
+  .btn-muted {
+    background-color: var(--color-bg-button-muted);
+    color: var(--color-text-primary);
+  }
+  .dark .btn-muted {
+    background-color: var(--color-bg-dark-secondary);
+    color: var(--color-dark-text-primary);
+  }
+
+  /* button icons */
+  .btn-icon {
+    @apply w-4 h-4 m-1
+  }
+
+  /* drawer button */
+  .btn-drawer {
+    @apply w-6 h-6 m-1;
+    color: var(--color-text-primary);
+  }
+  .btn-drawer:hover {
+    color: var(--color-text-muted);
+  }
+  .dark .btn-drawer {
+    color: var(--color-dark-text-primary);
+  }
+  .dark .hover .btn-drawer {
+    color: var(--color-dark-text-muted);
+  }
+
+  /* card */
+  .card {
+    @apply rounded p-3;
+    background-color: transparent;
+    border: 1px solid var(--color-border-primary);
+    color: var(--color-text-primary);
+  }
+  .dark .card {
+    background-color: transparent;
+    border: 1px solid var(--color-dark-border-primary);
+    color: var(--color-dark-text-primary);
+  }
+
+  /* card header */
+  .card-header {
+    @apply w-2/3 font-bold text-2xl mb-2;
+    color: var(--color-text-primary);
+  }
+  .dark .card-header {
+    @apply w-2/3 font-bold text-2xl mb-2;
+    color: var(--color-dark-text-primary);
+  }
+
+  /* work segment */
+  .segment-work {
+    @apply h-6 rounded text-xs px-2;
+    background-color: var(--color-muted);
+    color: var(--color-text-primary);
+  }
+  .dark .segment-work {
+    @apply h-6 rounded text-xs px-2;
+    background-color: var(--color-dark-muted);
+    color: var(--color-dark-text-primary);
+  }
+
+  /* rest segment */
+  .segment-rest {
+    @apply h-6 rounded text-xs px-2;
+    background-color: transparent;
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border-primary);
+  }
+  .dark .segment-rest {
+    @apply h-6 rounded text-xs px-2;
+    background-color: transparent;
+    color: var(--color-dark-text-primary);
+    border: 1px solid var(--color-dark-border-primary);
+  }
+
+  /* segment label */
+  .segment-label {
+    @apply me-3;
+  }
+
+  /* text heading */
+  .text-heading {
+    color: var(--color-text-muted);
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .dark .text-heading {
+    color: var(--color-dark-text-primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  /* time input */
+  .time-input {
+    color: var(--color-text-primary);
+  }
+  .dark .time-input {
+    color: var(--color-dark-text-primary);
+  }
+
+  /* digit input */
+  .digit-input{
+    @apply pl-3 pr-3 rounded;
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border-primary);
+  }
+  .dark .digit-input {
+    @apply pl-3 pr-3 rounded;
+    background-color: var(--color-bg-dark-secondary);
+    color: var(--color-dark-text-primary);
+    border: 1px solid var(--color-dark-border-primary);
+  }
+
+  /* drawer */
+  .drawer {
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-secondary);
+    padding: 8px;
+  }
+  .dark .drawer {
+    color: var(--color-dark-text-primary);
+    background-color: var(--color-bg-dark-secondary);
+    padding: 8px;
+  }
+
+  /* sidebar */
+  .sidebar {
+    background-color: var(--color-bg-secondary);
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+ .dark .sidebar {
+    background-color: var(--color-bg-dark-secondary);
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
