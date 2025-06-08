@@ -22,7 +22,7 @@ const Sidebar: React.FC<SidebarProps> = ({ modes, mode, setMode }) => {
             {modes.map((item) => (
                 <Button
                     key={item.key}
-                    className={`btn-primary mb-2 ${mode === item.key
+                    className={`mb-2 ${mode === item.key
                         ? 'btn-selected'
                         : 'btn-primary'}`}
                     onClick={() => setMode(item.key as 'time' | 'workout' | 'timer' | 'stopwatch')}
