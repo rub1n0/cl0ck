@@ -10,28 +10,28 @@
   --clr-light-a0: #ffffff;
 
   /** Theme primary colors */
-  --clr-primary-a0: #093144;
-  --clr-primary-a10: #1b394a;
-  --clr-primary-a20: #294151;
-  --clr-primary-a30: #354a57;
-  --clr-primary-a40: #42535e;
-  --clr-primary-a50: #4e5b65;
+  --clr-primary-a0: #1d4ed8;
+  --clr-primary-a10: #2563eb;
+  --clr-primary-a20: #3b82f6;
+  --clr-primary-a30: #60a5fa;
+  --clr-primary-a40: #93c5fd;
+  --clr-primary-a50: #bfdbfe;
 
   /** Theme surface colors */
   --clr-surface-a0: #ffffff;
-  --clr-surface-a10: #f0f0f0;
-  --clr-surface-a20: #e1e1e1;
-  --clr-surface-a30: #d3d3d3;
-  --clr-surface-a40: #c5c5c5;
-  --clr-surface-a50: #b6b6b6;
+  --clr-surface-a10: #f8f9fa;
+  --clr-surface-a20: #e9ecef;
+  --clr-surface-a30: #dee2e6;
+  --clr-surface-a40: #ced4da;
+  --clr-surface-a50: #adb5bd;
 
   /** Theme tonal surface colors */
-  --clr-surface-tonal-a0: #e5e8eb;
-  --clr-surface-tonal-a10: #d9dcdf;
-  --clr-surface-tonal-a20: #ced0d2;
-  --clr-surface-tonal-a30: #c2c4c6;
-  --clr-surface-tonal-a40: #b7b8ba;
-  --clr-surface-tonal-a50: #acadae;
+  --clr-surface-tonal-a0: #f1f3f5;
+  --clr-surface-tonal-a10: #e9ecef;
+  --clr-surface-tonal-a20: #dee2e6;
+  --clr-surface-tonal-a30: #ced4da;
+  --clr-surface-tonal-a40: #adb5bd;
+  --clr-surface-tonal-a50: #868e96;
 
   --font-sans: 'Space Mono', monospace;
   --font-mono: 'Space Mono', monospace;
@@ -59,28 +59,28 @@
   --clr-light-a0: #ffffff;
 
   /** Theme primary colors */
-  --clr-primary-a0: #5185c3;
-  --clr-primary-a10: #6792ca;
-  --clr-primary-a20: #7c9fd1;
-  --clr-primary-a30: #8facd7;
-  --clr-primary-a40: #a2b9de;
-  --clr-primary-a50: #b5c7e5;
+  --clr-primary-a0: #93c5fd;
+  --clr-primary-a10: #a5d8ff;
+  --clr-primary-a20: #bde0fe;
+  --clr-primary-a30: #d0e2ff;
+  --clr-primary-a40: #e5edff;
+  --clr-primary-a50: #eef4ff;
 
   /** Theme surface colors */
   --clr-surface-a0: #121212;
-  --clr-surface-a10: #282828;
-  --clr-surface-a20: #3f3f3f;
-  --clr-surface-a30: #575757;
-  --clr-surface-a40: #717171;
-  --clr-surface-a50: #8b8b8b;
+  --clr-surface-a10: #1e1e1e;
+  --clr-surface-a20: #2c2c2c;
+  --clr-surface-a30: #383838;
+  --clr-surface-a40: #444444;
+  --clr-surface-a50: #555555;
 
   /** Theme tonal surface colors */
-  --clr-surface-tonal-a0: #1a1c21;
-  --clr-surface-tonal-a10: #2f3136;
-  --clr-surface-tonal-a20: #45474c;
-  --clr-surface-tonal-a30: #5d5f63;
-  --clr-surface-tonal-a40: #76777b;
-  --clr-surface-tonal-a50: #909194;
+  --clr-surface-tonal-a0: #1e1e1e;
+  --clr-surface-tonal-a10: #2a2a2a;
+  --clr-surface-tonal-a20: #383838;
+  --clr-surface-tonal-a30: #454545;
+  --clr-surface-tonal-a40: #525252;
+  --clr-surface-tonal-a50: #616161;
 
     --color-bg-dark-primary: var(--clr-surface-a0);
     --color-bg-dark-secondary: var(--clr-surface-a10);
