@@ -38,6 +38,7 @@
 
   --color-bg-primary: var(--clr-surface-a0);
   --color-bg-secondary: var(--clr-surface-a10);
+  --color-bg-button-muted: var(--clr-surface-a20);
 
   --color-primary: var(--clr-primary-a0);
   --color-secondary: var(--clr-primary-a10);
