@@ -1,5 +1,5 @@
 // Component: Drawer.tsx
-import { Button } from 'flowbite-react';
+import { Button, DarkThemeToggle } from 'flowbite-react';
 import { Menu } from 'lucide-react';
 
 type Mode = {
@@ -22,7 +22,10 @@ const Drawer: React.FC<DrawerProps> = ({ modes, mode, setMode, drawerOpen, setDr
                 <button onClick={() => setDrawerOpen(!drawerOpen)}>
                     <Menu className="btn-drawer"/>
                 </button>
-                <div className="text-heading">big digital cl0ck</div>
+                <div className="flex items-center gap-2">
+                    <div className="text-heading">big digital cl0ck</div>
+                    <DarkThemeToggle />
+                </div>
             </div>
             {drawerOpen && (
                 modes.map((item) => (
