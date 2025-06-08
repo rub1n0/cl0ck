@@ -1,5 +1,5 @@
 // Component: Sidebar.tsx
-import { Button } from 'flowbite-react';
+import { Button, DarkThemeToggle } from 'flowbite-react';
 
 type Mode = {
     key: string;
@@ -15,7 +15,10 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ modes, mode, setMode }) => {
     return (
         <aside className="hidden md:flex md:flex-col sidebar">
-            <h2 className="text-heading">big digital cl0ck</h2>
+            <div className="flex items-center gap-2 mb-2">
+                <h2 className="text-heading">big digital cl0ck</h2>
+                <DarkThemeToggle />
+            </div>
             {modes.map((item) => (
                 <Button
                     key={item.key}
