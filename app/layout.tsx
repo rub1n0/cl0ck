@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import '@fontsource/space-mono/index.css';
-import "./globals.css";
 import { ThemeModeScript } from 'flowbite-react';
 
 export const metadata: Metadata = {
@@ -18,7 +17,7 @@ export default function RootLayout({
       <head>
         <ThemeModeScript />
       </head>
-      <body className="body">
+      <body>
         {children}
       </body>
     </html>

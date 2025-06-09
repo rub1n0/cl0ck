@@ -24,14 +24,14 @@ export default function TimerMode() {
     };
 
     return (
-        <div className="flex flex-col gap-4 w-full max-w-md card">
-            <label className="flex flex-row">
+        <div>
+            <label>
                 Delay Start (sec):
                 <input
                     type="number"
                     value={delay}
                     onChange={(e) => setDelay(Math.max(0, Math.min(99, Number(e.target.value))))}
-                    className="input input-bordered digit-input w-1/4"
+                   
                     max={99}
                 />
             </label>
@@ -44,7 +44,7 @@ export default function TimerMode() {
                 onChange={updateTime}
             />
 
-            <Button className='btn-primary btn-hover btn-focus card' onClick={startTimer}>Start Timer</Button>
+            <Button onClick={startTimer}>Start Timer</Button>
         </div>
     );
 }

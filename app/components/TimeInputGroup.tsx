@@ -10,35 +10,35 @@ type TimeInputGroupProps = {
 
 export default function TimeInputGroup({ label, hours, minutes, seconds, onChange }: TimeInputGroupProps) {
     return (
-        <label className="flex flex-row time-input">
-            <div className="me-3 text-lg flex items-center">{label}</div>
-            <div className="flex gap-3 justify-between items-center">
-                <div className="text-xs">Hr</div>
+        <label>
+            <div>{label}</div>
+            <div>
+                <div>Hr</div>
                 <input
                     type="number"
                     min={0}
                     max={99}
                     value={hours}
                     onChange={(e) => onChange('H', Math.max(0, Math.min(99, Number(e.target.value))))}
-                    className="input input-bordered digit-input"
+                   
                 />
-                <div className="text-xs">Min</div>
+                <div>Min</div>
                 <input
                     type="number"
                     min={0}
                     max={59}
                     value={minutes}
                     onChange={(e) => onChange('M', Math.max(0, Math.min(59, Number(e.target.value))))}
-                    className="input input-bordered digit-input"
+                   
                 />
-                <div className="text-xs">Sec</div>
+                <div>Sec</div>
                 <input
                     type="number"
                     min={0}
                     max={59}
                     value={seconds}
                     onChange={(e) => onChange('S', Math.max(0, Math.min(59, Number(e.target.value))))}
-                    className="input input-bordered digit-input"
+                   
                 />
             </div>
         </label>
