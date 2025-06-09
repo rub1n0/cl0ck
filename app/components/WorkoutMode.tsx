@@ -152,6 +152,9 @@ export default function WorkoutMode() {
                                 </div>
                             )}
                             {round.rest > 0 && (
+                                <div>
+                                    <div>Rest</div>
+                                    {[round.restH && `${round.restH}h`, round.restM && `${round.restM}m`, round.restS && `${round.restS}s`].filter(Boolean).join(' ')}
                                 </div>
                             )}
                         </div>
