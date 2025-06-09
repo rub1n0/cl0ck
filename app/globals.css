@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@tailwind utilities;
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+/* :root {
+  --color-bg-primary: #f9fafb;
+} 
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-primary: #1f2937;
+  }
+  
+}
+
+@layer utilities {
+
+  .bg-primary {
+    background-color: var(--color-bg-primary);
+  }
+  .text-primary {
+    color: var(--color-text-primary);
+  }
+  .border-primary {
+    border-color: var(--color-border-primary);
+  }
+} */
