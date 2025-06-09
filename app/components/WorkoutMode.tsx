@@ -146,8 +146,7 @@ export default function WorkoutMode() {
                         </div>
                         <div>
                             {round.work > 0 && (
-                                <div
-                                >
+                                <div>
                                     <div>Work</div>
                                     {[round.workH && `${round.workH}h`, round.workM && `${round.workM}m`, round.workS && `${round.workS}s`].filter(Boolean).join(' ')}
                                 </div>
