@@ -13,12 +13,12 @@ export default function StopwatchMode() {
     };
 
     return (
-        <div className="flex flex-col gap-4 w-full max-w-md card">
-            <label className="flex flex-row">
+        <div>
+            <label>
                 Delay Start (sec):
-                <input type="number" value={delay} onChange={(e) => setDelay(Number(e.target.value))} className="input input-bordered w-1/4 digit-input" />
+                <input type="number" value={delay} onChange={(e) => setDelay(Number(e.target.value))} />
             </label>
-            <Button className='btn-primary btn-hover btn-focus card' onClick={startStopwatch}>Start Stopwatch</Button>
+            <Button onClick={startStopwatch}>Start Stopwatch</Button>
         </div>
     );
 }
