@@ -35,10 +35,10 @@ export default function Home() {
     };
 
     return (
-        <div>
+        <div className="flex min-h-screen">
             <Sidebar modes={modes} mode={mode} setMode={changeMode} />
 
-            <div>
+            <div className="flex-1 flex flex-col">
                 <Drawer
                     modes={modes}
                     mode={mode}
@@ -47,7 +47,7 @@ export default function Home() {
                     setDrawerOpen={setDrawerOpen}
                 />
 
-                <main>
+                <main className="flex flex-col items-center justify-start flex-1">
                     {mode === 'time' && <TimeMode />}
                     {mode === 'workout' && <WorkoutMode />}
                     {mode === 'timer' && <TimerMode />}

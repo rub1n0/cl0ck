@@ -87,12 +87,12 @@ export default function WorkoutMode() {
     const durationToSeconds = (h: number, m: number, s: number) => h * 3600 + m * 60 + s;
 
     return (
-        <div>
-            <div>
+        <div className="flex flex-col gap-4 w-full max-w-md sm:max-w-lg md:max-w-2xl">
+            <div className='card'>
                 <input
                     defaultValue="Pre-Workout"
                     type="text"
-                   
+                    className="card-header input input-bordered"
                     readOnly
                 />
                 <TimeInputGroup
@@ -113,22 +113,22 @@ export default function WorkoutMode() {
             {roundsData.map((round, idx) => {
                 const total = round.work + round.rest;
                 return (
-                    <div key={idx}>
-                        <div>
+                    <div key={idx} className="card">
+                        <div className="flex justify-between">
                             <input
                                 type="text"
                                 value={round.label}
                                 onChange={(e) => updateRound(idx, 'label', e.target.value)}
-                               
+                                className="card-header input input-bordered"
                             />
-                            <div>
-                                {idx > 0 && <Button size="xs" onClick={() => moveRound(idx, idx - 1)}><ArrowUp /></Button>}
-                                {idx < roundsData.length - 1 && <Button size="xs" onClick={() => moveRound(idx, idx + 1)}><ArrowDown /></Button>}
-                                <Button size="xs" onClick={() => duplicateRound(idx)}><Copy /></Button>
-                                <Button size="xs" onClick={() => deleteRound(idx)}><Trash2 /></Button>
+                            <div className="flex gap-2">
+                                {idx > 0 && <Button size="xs" className='btn-primary btn-hover btn-focus' onClick={() => moveRound(idx, idx - 1)}><ArrowUp className="btn-icon" /></Button>}
+                                {idx < roundsData.length - 1 && <Button size="xs" className='btn-primary btn-hover btn-focus' onClick={() => moveRound(idx, idx + 1)}><ArrowDown className="btn-icon" /></Button>}
+                                <Button size="xs" className='btn-primary btn-hover btn-focus' onClick={() => duplicateRound(idx)}><Copy className="btn-icon" /></Button>
+                                <Button size="xs" className='btn-primary btn-hover btn-focus' onClick={() => deleteRound(idx)}><Trash2 className="btn-icon" /></Button>
                             </div>
                         </div>
-                        <div>
+                        <div className="flex flex-col gap-2">
                             <TimeInputGroup
                                 label="Work"
                                 hours={round.workH}
@@ -144,16 +144,22 @@ export default function WorkoutMode() {
                                 onChange={(unit, value) => updateRound(idx, `rest${unit}` as keyof Round, value)}
                             />
                         </div>
-                        <div>
+                        <div className="flex items-center mt-1">
                             {round.work > 0 && (
-                                <div>
-                                    <div>Work</div>
+                                <div
+                                    className={`segment-work flex items-center justify-center`}
+                                    style={{ width: round.rest === 0 ? '100%' : `${(round.work / total) * 100}%` }}
+                                >
+                                    <div className='segment-label'>Work</div>
                                     {[round.workH && `${round.workH}h`, round.workM && `${round.workM}m`, round.workS && `${round.workS}s`].filter(Boolean).join(' ')}
                                 </div>
                             )}
                             {round.rest > 0 && (
-                                <div>
-                                    <div>Rest</div>
+                                <div
+                                    className={`segment-rest flex items-center justify-center`}
+                                    style={{ width: round.work === 0 ? '100%' : `${(round.rest / total) * 100}%` }}
+                                >
+                                    <div className='segment-label'>Rest</div>
                                     {[round.restH && `${round.restH}h`, round.restM && `${round.restM}m`, round.restS && `${round.restS}s`].filter(Boolean).join(' ')}
                                 </div>
                             )}
@@ -161,8 +167,8 @@ export default function WorkoutMode() {
                     </div>
                 );
             })}
-            <div>
-                <Select onChange={(e) => {
+            <div className='flex gap-2 flex-flow-row justify-between'>
+                <Select className="w-1/3 mb-2" onChange={(e) => {
                     const val = e.target.value;
                     if (val === 'Tabata') {
                         setRoundsData(Array(8).fill({ label: 'Tabata', work: 20, rest: 10, workH: 0, workM: 0, workS: 20, restH: 0, restM: 0, restS: 10 }));
@@ -175,9 +181,9 @@ export default function WorkoutMode() {
                     <option value="EMOM">EMOM</option>
                 </Select>
 
-                <Button onClick={addRound}><PlusIcon />Round</Button>
+                <Button className='w-1/3 btn-primary btn-hover btn-focus card' onClick={addRound}><PlusIcon className="btn-icon" />Round</Button>
             </div>
-            <Button onClick={startWorkout}>Start Workout</Button>
+            <Button className='btn-primary btn-hover btn-focus card' onClick={startWorkout}>Start Workout</Button>
         </div>
     );
 };

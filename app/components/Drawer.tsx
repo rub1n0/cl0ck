@@ -17,13 +17,13 @@ type DrawerProps = {
 
 const Drawer: React.FC<DrawerProps> = ({ modes, mode, setMode, drawerOpen, setDrawerOpen }) => {
     return (
-        <div>
-            <div>
+        <div className="md:hidden flex flex-col drawer">
+            <div className='flex justify-between items-center'>
                 <button onClick={() => setDrawerOpen(!drawerOpen)}>
-                    <Menu/>
+                    <Menu className="btn-drawer"/>
                 </button>
-                <div>
-                    <div>big digital cl0ck</div>
+                <div className="flex items-center gap-2">
+                    <div className="text-heading">big digital cl0ck</div>
                     <DarkThemeToggle />
                 </div>
             </div>
@@ -31,6 +31,9 @@ const Drawer: React.FC<DrawerProps> = ({ modes, mode, setMode, drawerOpen, setDr
                 modes.map((item) => (
                     <Button
                         key={item.key}
+                        className={`btn-hover btn-focus mb-2 ${mode === item.key
+                                ? "btn-selected" : "btn-primary"
+                            }`}
                         onClick={() => setMode(item.key as 'time' | 'workout' | 'timer' | 'stopwatch')}
                     >
                         {item.label}
