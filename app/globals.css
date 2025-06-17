@@ -6,8 +6,8 @@
 :root {
 
   /** Base colors */
-  --clr-dark-a0: #000000;
-  --clr-light-a0: #ffffff;
+  --clr-dark-a0: #484b6a;
+  --clr-light-a0: #fafafa;
 
   /** Theme primary colors */
   --clr-primary-a0: #1d4ed8;
@@ -18,20 +18,20 @@
   --clr-primary-a50: #bfdbfe;
 
   /** Theme surface colors */
-  --clr-surface-a0: #ffffff;
-  --clr-surface-a10: #f8f9fa;
-  --clr-surface-a20: #e9ecef;
-  --clr-surface-a30: #dee2e6;
-  --clr-surface-a40: #ced4da;
-  --clr-surface-a50: #adb5bd;
+  --clr-surface-a0: #fafafa;
+  --clr-surface-a10: #e4e5f1;
+  --clr-surface-a20: #d2d3db;
+  --clr-surface-a30: #9394a5;
+  --clr-surface-a40: #484b6a;
+  --clr-surface-a50: #484b6a;
 
   /** Theme tonal surface colors */
-  --clr-surface-tonal-a0: #f1f3f5;
-  --clr-surface-tonal-a10: #e9ecef;
-  --clr-surface-tonal-a20: #dee2e6;
-  --clr-surface-tonal-a30: #ced4da;
-  --clr-surface-tonal-a40: #adb5bd;
-  --clr-surface-tonal-a50: #868e96;
+  --clr-surface-tonal-a0: #fafafa;
+  --clr-surface-tonal-a10: #e4e5f1;
+  --clr-surface-tonal-a20: #d2d3db;
+  --clr-surface-tonal-a30: #9394a5;
+  --clr-surface-tonal-a40: #484b6a;
+  --clr-surface-tonal-a50: #484b6a;
 
   --font-sans: 'Space Mono', monospace;
   --font-mono: 'Space Mono', monospace;
